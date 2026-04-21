@@ -37,7 +37,9 @@ By predicting customer satisfaction, airlines can focus on improving the areas t
 ---
 
 ## Dataset Information
-
+- `data/train_sample.csv` → Sample dataset for GitHub preview
+- `data/train_full.csv` → Full dataset used for training
+Note: Full dataset may not preview due to GitHub size limitations.
 - **Dataset name:** `train_full.csv`
 - **Dataset shape:** `103904 rows × 25 columns`
 - **Target column:** `satisfaction`
@@ -50,16 +52,13 @@ Before modeling, unnecessary columns such as `Unnamed: 0` and `id` were removed.
 
 ---
 
-## Tech Stack
+##  Tech Stack
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
-- Streamlit
-- Joblib
+- Programming: Python
+- Data Analysis: Pandas, NumPy
+- Visualization: Matplotlib, Seaborn
+- Machine Learning: Scikit-learn
+- Deployment: Streamlit, Hugging Face Spaces
 
 ---
 
@@ -160,15 +159,12 @@ The models were evaluated using:
 
 ## Results
 
-### Best Accuracy Before Hyperparameter Tuning
-- **Random Forest Test Accuracy:** `0.9616957797988547`
-
-### Best Model After Hyperparameter Tuning
-- **Best Model:** Random Forest
-- **Best Parameters:**
-  - `max_depth = 10`
-  - `n_estimators = 50`
-- **Best CV Score:** `0.9437700767800156`
+- Best Model: Random Forest
+- Accuracy: 96.1%
+- Best Parameters:
+  - max_depth = 10
+  - n_estimators = 50
+- Cross-validation score: 0.94
 
 ### Final Observation
 Random Forest performed better than Logistic Regression and Decision Tree, making it the best model for this project.
@@ -214,14 +210,25 @@ and saved as:
 ## Project Structure
 
 ```text
+
 Aircraft-Customer-Satisfaction/
+│
+├── data/
+│   ├── train_sample.csv
+│   └── train_full.csv
+│
+├── notebooks/
+│   └── eda.ipynb
+│
+├── models/
+│   └── rf_pipeline.pkl
+│
+├── assets/
+│   └── output.png
+│
 ├── app.py
-├── rf_pipeline.pkl
 ├── requirements.txt
-├── README.md
-├── output.png
-└── data/
-    └── aircraft.csv
+└── README.md
 
 
 ##  How to Run Locally
@@ -248,10 +255,18 @@ streamlit run app.py
 
 ###  Application Interface
 
-![UI](output.png)
+![App Screenshot](assets/output.png)
 
 ---
 
+##  Key Achievements
+
+- Achieved **96.1% accuracy** using Random Forest
+- Improved model performance using **GridSearchCV**
+- Built scalable preprocessing pipeline using **ColumnTransformer**
+- Deployed model using **Streamlit + Hugging Face**
+
+---
 
 ##  Key Insights
 
