@@ -38,7 +38,7 @@ By predicting customer satisfaction, airlines can focus on improving the areas t
 
 ## Dataset Information
 
-- **Dataset name:** `aircraft.csv`
+- **Dataset name:** `train_full.csv`
 - **Dataset shape:** `103904 rows × 25 columns`
 - **Target column:** `satisfaction`
 - **Target classes:**
